@@ -1,13 +1,16 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hookdoo FAQ</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hookdoo FAQ</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
 </head>
+
 <body>
-  <div class="relative bg-indigo-600">
+  <div id="hookdeck-prompt" class="relative bg-indigo-600">
     <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
       <div class="pr-16 sm:text-center sm:px-16">
         <p class="font-medium text-white">
@@ -23,59 +26,66 @@
         </p>
       </div>
       <div class="absolute inset-y-0 right-0 pt-1 pr-1 flex items-start sm:pt-1 sm:pr-2 sm:items-start">
-        <button type="button" class="flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white">
+        <button type="button" onclick="toggleElement('hookdeck-prompt')"
+          class="flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white">
           <span class="sr-only">Dismiss</span>
           <!-- Heroicon name: outline/x -->
-          <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
   </div>
-        <div class="relative bg-gray-50 overflow-hidden">
-            <div class="relative pt-6 pb-16 sm:pb-6">
-              <div>
-                <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                  <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
-                    <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
-                      <div class="flex items-center justify-between w-full md:w-auto">
-                        <a href="./index.html">
-                          <span class="sr-only">Hookdoo</span>
-                          <img class="h-8 w-auto sm:h-10" src="./img/Hookdoo Hookdeck.svg" alt="hookdoo logo">
-                        </a>
-                        <div class="-mr-2 flex items-center md:hidden">
-                          <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <!-- Heroicon name: outline/menu -->
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="hidden md:flex md:space-x-10">
-                      <a href="./getstarted.html" class="font-medium text-gray-500 hover:text-gray-900">Get Started</a>
-          
-                      <a href="./pricing.html" class="font-medium text-gray-500 hover:text-gray-900">Pricing</a>
-          
-                      <a href="./FAQ.html" class="font-medium text-gray-500 hover:text-gray-900">FAQ</a>
-          
-                     
-                    </div>
-                    <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                      <a href="https://my.hookdoo.com/login" class="text-base font-medium text-gray-500 hover:text-gray-900">
-                        Log In
-                      </a>
-                      <a href="https://my.hookdoo.com/signup" class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                        Sign up
-                      </a>
-                    </div>
-                  </nav>
+  <div class="relative bg-gray-50 overflow-hidden">
+    <div class="relative pt-6 pb-16 sm:pb-6">
+      <div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+            <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+              <div class="flex items-center justify-between w-full md:w-auto">
+                <a href="./index.html">
+                  <span class="sr-only">Hookdoo</span>
+                  <img class="h-8 w-auto sm:h-10" src="./img/Hookdoo Hookdeck.svg" alt="hookdoo logo">
+                </a>
+                <div class="-mr-2 flex items-center md:hidden">
+                  <button type="button" onclick="toggleElement('mobile-menu')"
+                    class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                    aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Heroicon name: outline/menu -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
                 </div>
-          
-                <!--
+              </div>
+            </div>
+            <div class="hidden md:flex md:space-x-10">
+              <a href="./getstarted.html" class="font-medium text-gray-500 hover:text-gray-900">Get Started</a>
+
+              <a href="./pricing.html" class="font-medium text-gray-500 hover:text-gray-900">Pricing</a>
+
+              <a href="./FAQ.html" class="font-medium text-gray-500 hover:text-gray-900">FAQ</a>
+
+
+            </div>
+            <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+              <a href="https://my.hookdoo.com/login" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                Log In
+              </a>
+              <a href="https://my.hookdoo.com/signup"
+                class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                Sign up
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <!--
                   Mobile menu, show/hide based on menu open state.
           
                   Entering: "duration-150 ease-out"
@@ -85,8 +95,7 @@
                     From: "opacity-100 scale-100"
                     To: "opacity-0 scale-95"
                 -->
-                <div
-                class="
+        <div id="mobile-menu" class="
                   absolute
                   z-10
                   top-0
@@ -96,29 +105,20 @@
                   transform
                   origin-top-right
                   md:hidden
-                "
-              >
-                <div
-                  class="
+                ">
+          <div class="
                     rounded-lg
                     shadow-md
                     bg-white
                     ring-1 ring-black ring-opacity-5
                     overflow-hidden
-                  "
-                >
-                  <div class="px-5 pt-4 flex items-center justify-between">
-                    <div>
-                      <img
-                        class="h-8 w-auto"
-                        src="./img/Hookdoo Hookdeck.svg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="-mr-2">
-                      <button
-                        type="button"
-                        class="
+                  ">
+            <div class="px-5 pt-4 flex items-center justify-between">
+              <div>
+                <img class="h-8 w-auto" src="./img/Hookdoo Hookdeck.svg" alt="" />
+              </div>
+              <div class="-mr-2">
+                <button onclick="toggleElement('mobile-menu')" type="button" class="
                           bg-white
                           rounded-md
                           p-2
@@ -131,118 +131,90 @@
                           focus:ring-2
                           focus:ring-inset
                           focus:ring-indigo-500
-                        "
-                      >
-                        <span class="sr-only">Close menu</span>
-                        <!-- Heroicon name: outline/x -->
-                        <svg
-                          class="h-6 w-6"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="px-2 pt-2 pb-3">
-                    <a
-                      href="./getstarted.html"
-                      class="
-                        block
-                        px-3
-                        py-2
-                        rounded-md
-                        text-base
-                        font-medium
-                        text-gray-700
-                        hover:text-gray-900 hover:bg-gray-50
-                      "
-                      >Get Started</a
-                    >
-
-                    <a
-                      href="./pricing.html"
-                      class="
-                        block
-                        px-3
-                        py-2
-                        rounded-md
-                        text-base
-                        font-medium
-                        text-gray-700
-                        hover:text-gray-900 hover:bg-gray-50
-                      "
-                      >Pricing</a
-                    >
-
-                    <a
-                      href="./FAQ.html"
-                      class="
-                        block
-                        px-3
-                        py-2
-                        rounded-md
-                        text-base
-                        font-medium
-                        text-gray-700
-                        hover:text-gray-900 hover:bg-gray-50
-                      "
-                      >FAQ</a
-                    >
-                  </div>
-                  <a
-                    href="https://my.hookdoo.com/login"
-                    class="
-                      block
-                      w-full
-                      px-5
-                      py-3
-                      text-center
-                      font-medium
-                      text-indigo-600
-                      bg-gray-50
-                      hover:bg-gray-100
-                    "
-                  >
-                    Log in
-                  </a>
-                  <a
-                    href="https://my.hookdoo.com/signup"
-                    class="
-                      block
-                      w-full
-                      px-5
-                      py-3
-                      text-center
-                      font-medium
-                      text-indigo-600
-                      bg-gray-50
-                      hover:bg-gray-100
-                    "
-                  >
-                    Sign Up
-                  </a>
-                </div>
+                        ">
+                  <span class="sr-only">Close menu</span>
+                  <!-- Heroicon name: outline/x -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
               </div>
             </div>
+            <div class="px-2 pt-2 pb-3">
+              <a href="./getstarted.html" class="
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                        text-gray-700
+                        hover:text-gray-900 hover:bg-gray-50
+                      ">Get Started</a>
+
+              <a href="./pricing.html" class="
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                        text-gray-700
+                        hover:text-gray-900 hover:bg-gray-50
+                      ">Pricing</a>
+
+              <a href="./FAQ.html" class="
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                        text-gray-700
+                        hover:text-gray-900 hover:bg-gray-50
+                      ">FAQ</a>
+            </div>
+            <a href="https://my.hookdoo.com/login" class="
+                      block
+                      w-full
+                      px-5
+                      py-3
+                      text-center
+                      font-medium
+                      text-indigo-600
+                      bg-gray-50
+                      hover:bg-gray-100
+                    ">
+              Log in
+            </a>
+            <a href="https://my.hookdoo.com/signup" class="
+                      block
+                      w-full
+                      px-5
+                      py-3
+                      text-center
+                      font-medium
+                      text-indigo-600
+                      bg-gray-50
+                      hover:bg-gray-100
+                    ">
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
 
       <!--FAQ -->
       <div class="bg-gray-50">
         <div class="max-w-7xl mx-auto py-16 px-4 divide-y-2 divide-grey-200 sm:py-24 sm:px-6 lg:px-8">
-          <div><h2 class="text-3xl font-extrabold text-gray-900">
-            Frequently asked questions
-          </h2>
-          <p class="mt-4 text-lg text-gray-500">Can’t find the answer you’re looking for? Reach out to our <a href="mailto:info@hookdoo.com" class="font-medium text-indigo-600 hover:text-indigo-500">team</a>.</p>
-        </div>
+          <div>
+            <h2 class="text-3xl font-extrabold text-gray-900">
+              Frequently asked questions
+            </h2>
+            <p class="mt-4 text-lg text-gray-500">Can’t find the answer you’re looking for? Reach out to our <a
+                href="mailto:info@hookdoo.com" class="font-medium text-indigo-600 hover:text-indigo-500">team</a>.</p>
+          </div>
           <div class="mt-6 pt-10 ">
             <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12">
               <!-- More questions... -->
@@ -251,7 +223,7 @@
                   How many request can I receive per hook?
                 </dt>
                 <dd class="mt-2 text-base text-gray-500">
-                    Up to 100 requests per minute per hook and up to 1000 requests per hour per hook.
+                  Up to 100 requests per minute per hook and up to 1000 requests per hour per hook.
                 </dd>
               </div>
               <div>
@@ -259,7 +231,7 @@
                   How many invocation can be replayed per hook?
                 </dt>
                 <dd class="mt-2 text-base text-gray-500">
-                    Up to 200 hook invocation replays per hour per hook.
+                  Up to 200 hook invocation replays per hour per hook.
                 </dd>
               </div>
               <div>
@@ -267,7 +239,7 @@
                   Does my failed trigger rule count?
                 </dt>
                 <dd class="mt-2 text-base text-gray-500">
-                    Yes. Requests that fail trigger rule are counted against the quota and returns status code 202
+                  Yes. Requests that fail trigger rule are counted against the quota and returns status code 202
                 </dd>
               </div>
               <div>
@@ -275,7 +247,7 @@
                   What happens when the API is throttled?
                 </dt>
                 <dd class="mt-2 text-base text-gray-500">
-                    A status code of 429 is returned.
+                  A status code of 429 is returned.
                 </dd>
               </div>
               <div>
@@ -283,7 +255,7 @@
                   What is the maximum size of a single payload?
                 </dt>
                 <dd class="mt-2 text-base text-gray-500">
-                    The maximum size is 5MB.
+                  The maximum size is 5MB.
                 </dd>
               </div>
               <div>
@@ -291,7 +263,7 @@
                   What is the maximum capacity per hour?
                 </dt>
                 <dd class="mt-2 text-base text-gray-500">
-                    The maximum ingestion is 60 MB of various payloads per hook per hour.
+                  The maximum ingestion is 60 MB of various payloads per hook per hour.
                 </dd>
               </div>
               <div>
@@ -320,7 +292,7 @@
               </div>
               <div>
                 <dt class="text-lg leading-6 font-medium text-gray-900">
-                What information can I get from my payload?
+                  What information can I get from my payload?
                 </dt>
                 <dd class="mt-2 text-base text-gray-500">
                   JSON encoding allows only root object as payload.
@@ -331,38 +303,33 @@
         </div>
       </div>
 
-        <!-- CTA Section -->
-        <div class="bg-white">
-          <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <div
-              class="
+      <!-- CTA Section -->
+      <div class="bg-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+          <div class="
                 bg-indigo-700
                 rounded-lg
                 shadow-xl
                 overflow-hidden
                 lg:grid lg:grid-cols-2 lg:gap-4
-              "
-            >
-              <div
-                class="
+              ">
+            <div class="
                   pt-10
                   pb-12
                   px-6
                   sm:pt-16 sm:px-16
                   lg:py-16 lg:pr-0
                   xl:py-20 xl:px-20
-                "
-              >
-                <div class="lg:self-center">
-                  <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
-                    <span class="block">Try Hookdoo for free.</span>
-                  </h2>
-                  <p class="mt-4 text-lg leading-6 text-indigo-200">
-                    Hookdoo is included in <a class="font-extrabold text-white" href="https://hookdeck.com">Hookdeck's</a>  pricing plan! 
-                  </p>
-                  <a
-                    href="https://my.hookdoo.com/signup"
-                    class="
+                ">
+              <div class="lg:self-center">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                  <span class="block">Try Hookdoo for free.</span>
+                </h2>
+                <p class="mt-4 text-lg leading-6 text-indigo-200">
+                  Hookdoo is included in <a class="font-extrabold text-white" href="https://hookdeck.com">Hookdeck's</a>
+                  pricing plan!
+                </p>
+                <a href="https://my.hookdoo.com/signup" class="
                       mt-8
                       bg-white
                       border border-transparent
@@ -376,12 +343,8 @@
                       font-medium
                       text-indigo-600
                       hover:bg-indigo-50
-                    "
-                    >Sign up</a
-                  >
-                  <a
-                    href="https://github.com/adnanh/webhook"
-                    class="
+                    ">Sign up</a>
+                <a href="https://github.com/adnanh/webhook" class="
                       mt-8
                       bg-blue-500
                       border border-transparent
@@ -395,69 +358,44 @@
                       font-medium
                       text-white
                       hover:bg-blue-400
-                    "
-                    >Open Source</a
-                  >
-                </div>
+                    ">Open Source</a>
               </div>
-              <div
-                class="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1"
-              >
-                <img
-                  class="
+            </div>
+            <div class="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
+              <img class="
                     transform
                     translate-x-6 translate-y-6
                     rounded-md
                     object-cover object-left-top
                     sm:translate-x-16
                     lg:translate-y-20
-                  "
-                  src="./img/Trigger_rule.png"
-                  alt="App screenshot"
-                />
-              </div>
+                  " src="./img/Trigger_rule.png" alt="App screenshot" />
             </div>
           </div>
         </div>
+      </div>
       </main>
 
       <footer class="bg-white">
-        <div
-          class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8"
-        >
-          <nav
-            class="-mx-5 -my-2 flex flex-wrap justify-center"
-            aria-label="Footer"
-          >
+        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+          <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
             <div class="px-5 py-2">
-              <a
-                href="./getstarted.html"
-                class="text-base text-gray-500 hover:text-gray-900"
-              >
+              <a href="./getstarted.html" class="text-base text-gray-500 hover:text-gray-900">
                 Get Started
               </a>
             </div>
             <div class="px-5 py-2">
-              <a
-                href="./pricing.html"
-                class="text-base text-gray-500 hover:text-gray-900"
-              >
+              <a href="./pricing.html" class="text-base text-gray-500 hover:text-gray-900">
                 Pricing
               </a>
             </div>
             <div class="px-5 py-2">
-              <a
-                href="./FAQ.html"
-                class="text-base text-gray-500 hover:text-gray-900"
-              >
+              <a href="./FAQ.html" class="text-base text-gray-500 hover:text-gray-900">
                 FAQ
               </a>
             </div>
             <div class="px-5 py-2">
-              <a
-                href="./terms.html"
-                class="text-base text-gray-500 hover:text-gray-900"
-              >
+              <a href="./terms.html" class="text-base text-gray-500 hover:text-gray-900">
                 Terms
               </a>
             </div>
@@ -472,7 +410,7 @@
               <p class=" text-base">
                 Part of the <span class="text-indigo-500"> <a href="https://hookdeck.com">Hookdeck</a></span> family.
               </p>
-              </div>  
+            </div>
           </div>
           <p class="mt-8 text-center text-base text-gray-400">
             &copy; 2021 Hookdoo. All rights reserved.
@@ -480,5 +418,6 @@
         </div>
       </footer>
     </div>
-  </body>
+</body>
+
 </html>

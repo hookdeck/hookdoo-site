@@ -1,13 +1,16 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hookdoo Terms</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hookdoo Terms</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
 </head>
+
 <body>
-  <div class="relative bg-indigo-600">
+  <div id="hookdeck-prompt" class="relative bg-indigo-600">
     <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
       <div class="pr-16 sm:text-center sm:px-16">
         <p class="font-medium text-white">
@@ -23,59 +26,66 @@
         </p>
       </div>
       <div class="absolute inset-y-0 right-0 pt-1 pr-1 flex items-start sm:pt-1 sm:pr-2 sm:items-start">
-        <button type="button" class="flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white">
+        <button type="button" onclick="toggleElement('hookdeck-prompt')"
+          class="flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white">
           <span class="sr-only">Dismiss</span>
           <!-- Heroicon name: outline/x -->
-          <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
   </div>
-        <div class="relative bg-gray-50 overflow-hidden">
-            <div class="relative pt-6 pb-16 sm:pb-6">
-              <div>
-                <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                  <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
-                    <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
-                      <div class="flex items-center justify-between w-full md:w-auto">
-                        <a href="./index.html">
-                          <span class="sr-only">Hookdoo</span>
-                          <img class="h-8 w-auto sm:h-10" src="./img/Hookdoo Hookdeck.svg" alt="hookdoo logo">
-                        </a>
-                        <div class="-mr-2 flex items-center md:hidden">
-                          <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <!-- Heroicon name: outline/menu -->
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="hidden md:flex md:space-x-10">
-                      <a href="./getstarted.html" class="font-medium text-gray-500 hover:text-gray-900">Get Started</a>
-          
-                      <a href="./pricing.html" class="font-medium text-gray-500 hover:text-gray-900">Pricing</a>
-          
-                      <a href="./FAQ.html" class="font-medium text-gray-500 hover:text-gray-900">FAQ</a>
-          
-                     
-                    </div>
-                    <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                      <a href="https://my.hookdoo.com/login" class="text-base font-medium text-gray-500 hover:text-gray-900">
-                        Log In
-                      </a>
-                      <a href="https://my.hookdoo.com/signup" class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                        Sign up
-                      </a>
-                    </div>
-                  </nav>
+  <div class="relative bg-gray-50 overflow-hidden">
+    <div class="relative pt-6 pb-16 sm:pb-6">
+      <div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+            <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+              <div class="flex items-center justify-between w-full md:w-auto">
+                <a href="./index.html">
+                  <span class="sr-only">Hookdoo</span>
+                  <img class="h-8 w-auto sm:h-10" src="./img/Hookdoo Hookdeck.svg" alt="hookdoo logo">
+                </a>
+                <div class="-mr-2 flex items-center md:hidden">
+                  <button onclick="toggleElement('mobile-menu')" type="button"
+                    class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                    aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Heroicon name: outline/menu -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
                 </div>
-          
-                <!--
+              </div>
+            </div>
+            <div class="hidden md:flex md:space-x-10">
+              <a href="./getstarted.html" class="font-medium text-gray-500 hover:text-gray-900">Get Started</a>
+
+              <a href="./pricing.html" class="font-medium text-gray-500 hover:text-gray-900">Pricing</a>
+
+              <a href="./FAQ.html" class="font-medium text-gray-500 hover:text-gray-900">FAQ</a>
+
+
+            </div>
+            <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+              <a href="https://my.hookdoo.com/login" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                Log In
+              </a>
+              <a href="https://my.hookdoo.com/signup"
+                class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                Sign up
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <!--
                   Mobile menu, show/hide based on menu open state.
           
                   Entering: "duration-150 ease-out"
@@ -85,8 +95,7 @@
                     From: "opacity-100 scale-100"
                     To: "opacity-0 scale-95"
                 -->
-                <div
-                class="
+        <div id="mobile-menu" class="
                   absolute
                   z-10
                   top-0
@@ -96,29 +105,20 @@
                   transform
                   origin-top-right
                   md:hidden
-                "
-              >
-                <div
-                  class="
+                ">
+          <div class="
                     rounded-lg
                     shadow-md
                     bg-white
                     ring-1 ring-black ring-opacity-5
                     overflow-hidden
-                  "
-                >
-                  <div class="px-5 pt-4 flex items-center justify-between">
-                    <div>
-                      <img
-                        class="h-8 w-auto"
-                        src="./img/Hookdoo Hookdeck.svg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="-mr-2">
-                      <button
-                        type="button"
-                        class="
+                  ">
+            <div class="px-5 pt-4 flex items-center justify-between">
+              <div>
+                <img class="h-8 w-auto" src="./img/Hookdoo Hookdeck.svg" alt="" />
+              </div>
+              <div class="-mr-2">
+                <button onclick="toggleElement('mobile-menu')" type="button" class="
                           bg-white
                           rounded-md
                           p-2
@@ -131,134 +131,110 @@
                           focus:ring-2
                           focus:ring-inset
                           focus:ring-indigo-500
-                        "
-                      >
-                        <span class="sr-only">Close menu</span>
-                        <!-- Heroicon name: outline/x -->
-                        <svg
-                          class="h-6 w-6"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="px-2 pt-2 pb-3">
-                    <a
-                      href="./getstarted.html"
-                      class="
-                        block
-                        px-3
-                        py-2
-                        rounded-md
-                        text-base
-                        font-medium
-                        text-gray-700
-                        hover:text-gray-900 hover:bg-gray-50
-                      "
-                      >Get Started</a
-                    >
-
-                    <a
-                      href="./pricing.html"
-                      class="
-                        block
-                        px-3
-                        py-2
-                        rounded-md
-                        text-base
-                        font-medium
-                        text-gray-700
-                        hover:text-gray-900 hover:bg-gray-50
-                      "
-                      >Pricing</a
-                    >
-
-                    <a
-                      href="./FAQ.html"
-                      class="
-                        block
-                        px-3
-                        py-2
-                        rounded-md
-                        text-base
-                        font-medium
-                        text-gray-700
-                        hover:text-gray-900 hover:bg-gray-50
-                      "
-                      >FAQ</a
-                    >
-                  </div>
-                  <a
-                    href="https://my.hookdoo.com/login"
-                    class="
-                      block
-                      w-full
-                      px-5
-                      py-3
-                      text-center
-                      font-medium
-                      text-indigo-600
-                      bg-gray-50
-                      hover:bg-gray-100
-                    "
-                  >
-                    Log in
-                  </a>
-                  <a
-                    href="https://my.hookdoo.com/signup"
-                    class="
-                      block
-                      w-full
-                      px-5
-                      py-3
-                      text-center
-                      font-medium
-                      text-indigo-600
-                      bg-gray-50
-                      hover:bg-gray-100
-                    "
-                  >
-                    Sign Up
-                  </a>
-                </div>
+                        ">
+                  <span class="sr-only">Close menu</span>
+                  <!-- Heroicon name: outline/x -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
               </div>
             </div>
+            <div class="px-2 pt-2 pb-3">
+              <a href="./getstarted.html" class="
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                        text-gray-700
+                        hover:text-gray-900 hover:bg-gray-50
+                      ">Get Started</a>
+
+              <a href="./pricing.html" class="
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                        text-gray-700
+                        hover:text-gray-900 hover:bg-gray-50
+                      ">Pricing</a>
+
+              <a href="./FAQ.html" class="
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                        text-gray-700
+                        hover:text-gray-900 hover:bg-gray-50
+                      ">FAQ</a>
+            </div>
+            <a href="https://my.hookdoo.com/login" class="
+                      block
+                      w-full
+                      px-5
+                      py-3
+                      text-center
+                      font-medium
+                      text-indigo-600
+                      bg-gray-50
+                      hover:bg-gray-100
+                    ">
+              Log in
+            </a>
+            <a href="https://my.hookdoo.com/signup" class="
+                      block
+                      w-full
+                      px-5
+                      py-3
+                      text-center
+                      font-medium
+                      text-indigo-600
+                      bg-gray-50
+                      hover:bg-gray-100
+                    ">
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
 
 
-    <!-- content -->
-    <div class="relative py-16 bg-gray-50 overflow-hidden">
+      <!-- content -->
+      <div class="relative py-16 bg-gray-50 overflow-hidden">
         <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
           <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
-            <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
+            <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none"
+              viewBox="0 0 404 384">
               <defs>
-                <pattern id="74b3fd99-0a6f-4271-bef2-e80eeafdf357" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <pattern id="74b3fd99-0a6f-4271-bef2-e80eeafdf357" x="0" y="0" width="20" height="20"
+                  patternUnits="userSpaceOnUse">
                   <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
                 </pattern>
               </defs>
               <rect width="404" height="384" fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)" />
             </svg>
-            <svg class="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
+            <svg class="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32" width="404" height="384"
+              fill="none" viewBox="0 0 404 384">
               <defs>
-                <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20"
+                  patternUnits="userSpaceOnUse">
                   <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
                 </pattern>
               </defs>
               <rect width="404" height="384" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
             </svg>
-            <svg class="absolute bottom-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
+            <svg class="absolute bottom-12 left-full transform translate-x-32" width="404" height="384" fill="none"
+              viewBox="0 0 404 384">
               <defs>
-                <pattern id="d3eb07ae-5182-43e6-857d-35c643af9034" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <pattern id="d3eb07ae-5182-43e6-857d-35c643af9034" x="0" y="0" width="20" height="20"
+                  patternUnits="userSpaceOnUse">
                   <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
                 </pattern>
               </defs>
@@ -269,69 +245,100 @@
         <div class="relative px-4 sm:px-6 lg:px-8">
           <div class="text-lg max-w-prose mx-auto">
             <h1>
-              <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Terms of Service and Privacy Policy</span>
+              <span
+                class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Terms
+                of Service and Privacy Policy</span>
             </h1>
-          <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
-            <p>The following document describes the terms you (the user) have to agree to in order to use Hookdoo.com (the service provided by the service provider). Failure to agree or to adhere to specified terms and conditions may result in your service access termination.</p>                
-            <p> The following document also describes the information the service collects and stores about you and the conditions under which the information may be shared with third parties.</p>
-            <h3>BETA NO WARRANTY POLICY</h3>
-            <p>This service is currently in beta access mode. You pay for the access to the beta of the service and we will notify you if any breaking changes or planned downtimes will in a timely manner, however unexpected downtimes can occur and the system can misbehave. We can offer no service level guarantees at this time.</p>
-            <h3>A) ACCESS TO USER SPECIFIED REMOTE COMPUTER DEVICES
-            </h3>
-            <p>Nothing that:</p>
-            <ul role="list">
-              <li>the service requires connecting to remote devices (servers)</li>
-              <li>connecting to servers requires valid access credentials</li>
-            </ul>
-            <p>You agree that servers you will specify for script execution belong to you, or you have valid and legally obtained credentials to access them and execute specified sequences of computer commands (“scripts”) on them.</p>
-            <p>You agree that your service access will be terminated if service provider is notified and presented with provable information that servers you specified do not belong to you or you have illegaly obtained credentials to access them.</p>
-            <h3>B) EXECUTION OF USER SPECIFIED SEQUENCES OF COMPUTER COMMANDS ON USER SPECIFIED REMOTE DEVICES </h3>
-            <p>Nothing that:</p>
-            <ul role="list">
-              <li>the service is delivered by executing user specified sequences of computer commands (scripts) on user’s behalf on specified servers</li>
-            </ul>
-            <p>You agree that the service will connect to specified servers and execute specified scripts.</p>
-            <p>Executed commands may additionally include commands specified by the service in order to provide service functionalities. These commands will exclusively consist of EXPORT commands that provide for environment variable scope visibility within your scripts. Environment variables will be scoped only within your script.</p>
-            <p>You agree that the service cannot be held responsible or liable for any damages caused by the service executing sequences of computer commands on your servers.</p>
-            <p>Please note that it is highly recommended you protect your script execution by defining secure trigger rules that will prevent unauthorized triggering of your scripts on your devices.</p>
-            <h3>C) FAIR USE</h3>
-            <p>You agree not to intentionally attempt to overload the system with service requests so to cause denial of service for other users.</p>   
-            <p>You agree that continued usage beyond documented and clearly specified fair use definition may be used as grounds for temporary or permanent termination of service access for your user account.</p>
-            <h3>D) SUBSCRIPTIONS</h3>
-            <p>Nothing that:</p>
-            <ul role="list">
-              <li>Service is based on pre-paid model where you manually load the service account through means of online payment.</li>
-              <li>Service account is automatically charged as per the subscription option you have selected.</li>
-              <li>In case of insufficient funds for maintenance of your current subscription option you will be automatically unsubscribed.</li>
-              <li>You agree to have your service account terminated after more than 6 months of unsubscribed status.</li>
-              <li>No-refunds policy is in place so we recommend you load the account with minimum amount necessary for your optimal service usage. Exception from no-refund policy are continued service outages which you agree to be individually settled on a case-by-case basis.</li>
-              <li> You agree that no service level agreement or guarantee is in place for this service at this time.</li>
-            </ul>
-            <h3>E) PRIVACY</h3>
-            <p>Information considered private you share with the service provider in order for service to function properly is as follows:</p>
-            <ul role="list">
-              <li>email address</li>
-              <li>first and last name</li>
-              <li>IP addresses you use the service from</li>
-              <li>server hostnames</li>
-              <li> server SSH ports, login usernames and passwords/SSH keys</li>
-              <li>script code</li>
-            </ul>
-            <p>Information produced and/or logged by the service automatically is as follows:</p>
-            <ul role="list">
-              <li>PayPal transactional IDs and metadata as to support payment system</li>
-              <li>hook invocation timestamps, payloads, origin headers, query strings and payloads</li>
-              <li>logs produced by script execution</li>
-              <li>slogin history and details (origin IP address, session start, session end)</li>
-            </ul>
-            <p>You agree for service to keep your script execution logs for up to 48 hours as to support your history logs access plus up to 30 days of historical records for service’s own backup procedures.</p>
-            <p>You maintain all your intellectual property in relation to the script code you provide.</p>
-            <p>Service provider will not disclose any of provided information to third parties, except when presented with relevant information from legal authorities and when obligated by law.</p>
-            <h3>F) SETTLING DISPUTES</h3>
-            <p>By using the service, you agree to resolve any disputes between you and the service provider under applicable laws of Bosnia and Herzegovina and Federation of Bosnia and Herzegovina only if mutual direct agreement between you and service provider is not possible.</p>
+            <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+              <p>The following document describes the terms you (the user) have to agree to in order to use Hookdoo.com
+                (the service provided by the service provider). Failure to agree or to adhere to specified terms and
+                conditions may result in your service access termination.</p>
+              <p> The following document also describes the information the service collects and stores about you and
+                the conditions under which the information may be shared with third parties.</p>
+              <h3>BETA NO WARRANTY POLICY</h3>
+              <p>This service is currently in beta access mode. You pay for the access to the beta of the service and we
+                will notify you if any breaking changes or planned downtimes will in a timely manner, however unexpected
+                downtimes can occur and the system can misbehave. We can offer no service level guarantees at this time.
+              </p>
+              <h3>A) ACCESS TO USER SPECIFIED REMOTE COMPUTER DEVICES
+              </h3>
+              <p>Nothing that:</p>
+              <ul role="list">
+                <li>the service requires connecting to remote devices (servers)</li>
+                <li>connecting to servers requires valid access credentials</li>
+              </ul>
+              <p>You agree that servers you will specify for script execution belong to you, or you have valid and
+                legally obtained credentials to access them and execute specified sequences of computer commands
+                (“scripts”) on them.</p>
+              <p>You agree that your service access will be terminated if service provider is notified and presented
+                with provable information that servers you specified do not belong to you or you have illegaly obtained
+                credentials to access them.</p>
+              <h3>B) EXECUTION OF USER SPECIFIED SEQUENCES OF COMPUTER COMMANDS ON USER SPECIFIED REMOTE DEVICES </h3>
+              <p>Nothing that:</p>
+              <ul role="list">
+                <li>the service is delivered by executing user specified sequences of computer commands (scripts) on
+                  user’s behalf on specified servers</li>
+              </ul>
+              <p>You agree that the service will connect to specified servers and execute specified scripts.</p>
+              <p>Executed commands may additionally include commands specified by the service in order to provide
+                service functionalities. These commands will exclusively consist of EXPORT commands that provide for
+                environment variable scope visibility within your scripts. Environment variables will be scoped only
+                within your script.</p>
+              <p>You agree that the service cannot be held responsible or liable for any damages caused by the service
+                executing sequences of computer commands on your servers.</p>
+              <p>Please note that it is highly recommended you protect your script execution by defining secure trigger
+                rules that will prevent unauthorized triggering of your scripts on your devices.</p>
+              <h3>C) FAIR USE</h3>
+              <p>You agree not to intentionally attempt to overload the system with service requests so to cause denial
+                of service for other users.</p>
+              <p>You agree that continued usage beyond documented and clearly specified fair use definition may be used
+                as grounds for temporary or permanent termination of service access for your user account.</p>
+              <h3>D) SUBSCRIPTIONS</h3>
+              <p>Nothing that:</p>
+              <ul role="list">
+                <li>Service is based on pre-paid model where you manually load the service account through means of
+                  online payment.</li>
+                <li>Service account is automatically charged as per the subscription option you have selected.</li>
+                <li>In case of insufficient funds for maintenance of your current subscription option you will be
+                  automatically unsubscribed.</li>
+                <li>You agree to have your service account terminated after more than 6 months of unsubscribed status.
+                </li>
+                <li>No-refunds policy is in place so we recommend you load the account with minimum amount necessary for
+                  your optimal service usage. Exception from no-refund policy are continued service outages which you
+                  agree to be individually settled on a case-by-case basis.</li>
+                <li> You agree that no service level agreement or guarantee is in place for this service at this time.
+                </li>
+              </ul>
+              <h3>E) PRIVACY</h3>
+              <p>Information considered private you share with the service provider in order for service to function
+                properly is as follows:</p>
+              <ul role="list">
+                <li>email address</li>
+                <li>first and last name</li>
+                <li>IP addresses you use the service from</li>
+                <li>server hostnames</li>
+                <li> server SSH ports, login usernames and passwords/SSH keys</li>
+                <li>script code</li>
+              </ul>
+              <p>Information produced and/or logged by the service automatically is as follows:</p>
+              <ul role="list">
+                <li>PayPal transactional IDs and metadata as to support payment system</li>
+                <li>hook invocation timestamps, payloads, origin headers, query strings and payloads</li>
+                <li>logs produced by script execution</li>
+                <li>slogin history and details (origin IP address, session start, session end)</li>
+              </ul>
+              <p>You agree for service to keep your script execution logs for up to 48 hours as to support your history
+                logs access plus up to 30 days of historical records for service’s own backup procedures.</p>
+              <p>You maintain all your intellectual property in relation to the script code you provide.</p>
+              <p>Service provider will not disclose any of provided information to third parties, except when presented
+                with relevant information from legal authorities and when obligated by law.</p>
+              <h3>F) SETTLING DISPUTES</h3>
+              <p>By using the service, you agree to resolve any disputes between you and the service provider under
+                applicable laws of Bosnia and Herzegovina and Federation of Bosnia and Herzegovina only if mutual direct
+                agreement between you and service provider is not possible.</p>
+            </div>
           </div>
         </div>
-      </div>
       </div>
 
       <!-- footer -->
@@ -339,31 +346,31 @@
         <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
           <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
             <div class="px-5 py-2">
-                <a href="../public/getstarted.html" class="text-base text-gray-500 hover:text-gray-900">
-                  Get Started
-                </a>
-              </div>
-            <div class="px-5 py-2">
-            <a href="../public/pricing.html" class="text-base text-gray-500 hover:text-gray-900">
-                Pricing
-            </a>
+              <a href="../public/getstarted.html" class="text-base text-gray-500 hover:text-gray-900">
+                Get Started
+              </a>
             </div>
             <div class="px-5 py-2">
-                <a href="../public/FAQ.html" class="text-base text-gray-500 hover:text-gray-900">
-                  FAQ
-                </a>
-              </div>
+              <a href="../public/pricing.html" class="text-base text-gray-500 hover:text-gray-900">
+                Pricing
+              </a>
+            </div>
+            <div class="px-5 py-2">
+              <a href="../public/FAQ.html" class="text-base text-gray-500 hover:text-gray-900">
+                FAQ
+              </a>
+            </div>
             <div class="px-5 py-2">
               <a href="../public/terms.html" class="text-base text-gray-500 hover:text-gray-900">
                 Terms
               </a>
             </div>
-      
+
             <div class="px-5 py-2">
-               <a href="mailto:info@hookdoo.com">info@hookdoo.com</a>
+              <a href="mailto:info@hookdoo.com">info@hookdoo.com</a>
             </div>
-      
-       
+
+
           </nav>
           <div class="mt-8 flex justify-center space-x-6">
             <div class="">
@@ -371,7 +378,7 @@
               <p class=" text-base">
                 Part of the <span class="text-indigo-500"> <a href="https://hookdeck.com">Hookdeck</a></span> family.
               </p>
-              </div>  
+            </div>
           </div>
           <p class="mt-8 text-center text-base text-gray-400">
             &copy; 2021 Hookdoo. All rights reserved.
@@ -379,4 +386,5 @@
         </div>
       </footer>
 </body>
+
 </html>

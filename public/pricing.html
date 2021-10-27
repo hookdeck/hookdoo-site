@@ -1,13 +1,16 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hookdoo Pricing</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hookdoo Pricing</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
 </head>
+
 <body>
-  <div class="relative bg-indigo-600">
+  <div id="hookdeck-prompt" class="relative bg-indigo-600">
     <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
       <div class="pr-16 sm:text-center sm:px-16">
         <p class="font-medium text-white">
@@ -23,59 +26,66 @@
         </p>
       </div>
       <div class="absolute inset-y-0 right-0 pt-1 pr-1 flex items-start sm:pt-1 sm:pr-2 sm:items-start">
-        <button type="button" class="flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white">
+        <button type="button" onclick="toggleElement('hookdeck-prompt')"
+          class="flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white">
           <span class="sr-only">Dismiss</span>
           <!-- Heroicon name: outline/x -->
-          <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
   </div>
-        <div class="relative bg-gray-50 overflow-hidden">
-            <div class="relative pt-6 pb-16 sm:pb-6">
-              <div>
-                <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                  <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
-                    <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
-                      <div class="flex items-center justify-between w-full md:w-auto">
-                        <a href="./index.html">
-                          <span class="sr-only">Hookdoo</span>
-                          <img class="h-8 w-auto sm:h-10" src="./img/Hookdoo Hookdeck.svg" alt="hookdoo logo">
-                        </a>
-                        <div class="-mr-2 flex items-center md:hidden">
-                          <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <!-- Heroicon name: outline/menu -->
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="hidden md:flex md:space-x-10">
-                      <a href="./getstarted.html" class="font-medium text-gray-500 hover:text-gray-900">Get Started</a>
-          
-                      <a href="./pricing.html" class="font-medium text-gray-500 hover:text-gray-900">Pricing</a>
-          
-                      <a href="./FAQ.html" class="font-medium text-gray-500 hover:text-gray-900">FAQ</a>
-          
-                     
-                    </div>
-                    <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                      <a href="https://my.hookdoo.com/login" class="text-base font-medium text-gray-500 hover:text-gray-900">
-                        Log In
-                      </a>
-                      <a href="https://my.hookdoo.com/signup" class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                        Sign up
-                      </a>
-                    </div>
-                  </nav>
+  <div class="relative bg-gray-50 overflow-hidden">
+    <div class="relative pt-6 pb-16 sm:pb-6">
+      <div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+            <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+              <div class="flex items-center justify-between w-full md:w-auto">
+                <a href="./index.html">
+                  <span class="sr-only">Hookdoo</span>
+                  <img class="h-8 w-auto sm:h-10" src="./img/Hookdoo Hookdeck.svg" alt="hookdoo logo">
+                </a>
+                <div class="-mr-2 flex items-center md:hidden">
+                  <button onclick="toggleElement('mobile-menu')" type="button"
+                    class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                    aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Heroicon name: outline/menu -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
                 </div>
-          
-                <!--
+              </div>
+            </div>
+            <div class="hidden md:flex md:space-x-10">
+              <a href="./getstarted.html" class="font-medium text-gray-500 hover:text-gray-900">Get Started</a>
+
+              <a href="./pricing.html" class="font-medium text-gray-500 hover:text-gray-900">Pricing</a>
+
+              <a href="./FAQ.html" class="font-medium text-gray-500 hover:text-gray-900">FAQ</a>
+
+
+            </div>
+            <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+              <a href="https://my.hookdoo.com/login" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                Log In
+              </a>
+              <a href="https://my.hookdoo.com/signup"
+                class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                Sign up
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <!--
                   Mobile menu, show/hide based on menu open state.
           
                   Entering: "duration-150 ease-out"
@@ -85,8 +95,7 @@
                     From: "opacity-100 scale-100"
                     To: "opacity-0 scale-95"
                 -->
-                <div
-                class="
+        <div id="mobile-menu" class="
                   absolute
                   z-10
                   top-0
@@ -96,29 +105,20 @@
                   transform
                   origin-top-right
                   md:hidden
-                "
-              >
-                <div
-                  class="
+                ">
+          <div class="
                     rounded-lg
                     shadow-md
                     bg-white
                     ring-1 ring-black ring-opacity-5
                     overflow-hidden
-                  "
-                >
-                  <div class="px-5 pt-4 flex items-center justify-between">
-                    <div>
-                      <img
-                        class="h-8 w-auto"
-                        src="./img/Hookdoo Hookdeck.svg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="-mr-2">
-                      <button
-                        type="button"
-                        class="
+                  ">
+            <div class="px-5 pt-4 flex items-center justify-between">
+              <div>
+                <img class="h-8 w-auto" src="./img/Hookdoo Hookdeck.svg" alt="" />
+              </div>
+              <div class="-mr-2">
+                <button onclick="toggleElement('mobile-menu')" type="button" class="
                           bg-white
                           rounded-md
                           p-2
@@ -131,331 +131,303 @@
                           focus:ring-2
                           focus:ring-inset
                           focus:ring-indigo-500
-                        "
-                      >
-                        <span class="sr-only">Close menu</span>
-                        <!-- Heroicon name: outline/x -->
-                        <svg
-                          class="h-6 w-6"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
-                        </svg>
-                      </button>
+                        ">
+                  <span class="sr-only">Close menu</span>
+                  <!-- Heroicon name: outline/x -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="px-2 pt-2 pb-3">
+              <a href="./getstarted.html" class="
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                        text-gray-700
+                        hover:text-gray-900 hover:bg-gray-50
+                      ">Get Started</a>
+
+              <a href="./pricing.html" class="
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                        text-gray-700
+                        hover:text-gray-900 hover:bg-gray-50
+                      ">Pricing</a>
+
+              <a href="./FAQ.html" class="
+                        block
+                        px-3
+                        py-2
+                        rounded-md
+                        text-base
+                        font-medium
+                        text-gray-700
+                        hover:text-gray-900 hover:bg-gray-50
+                      ">FAQ</a>
+            </div>
+            <a href="https://my.hookdoo.com/login" class="
+                      block
+                      w-full
+                      px-5
+                      py-3
+                      text-center
+                      font-medium
+                      text-indigo-600
+                      bg-gray-50
+                      hover:bg-gray-100
+                    ">
+              Log in
+            </a>
+            <a href="https://my.hookdoo.com/signup" class="
+                      block
+                      w-full
+                      px-5
+                      py-3
+                      text-center
+                      font-medium
+                      text-indigo-600
+                      bg-gray-50
+                      hover:bg-gray-100
+                    ">
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- #pricing -->
+      <div class="bg-gray-50">
+        <div class="pt-12 sm:pt-16 lg:pt-24">
+          <div class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto space-y-2 lg:max-w-none">
+              <p class="text-3xl font-extrabold text-black sm:text-4xl lg:text-5xl">
+                Pricing
+              </p>
+              <p class="text-xl text-black">
+                Everything you need to integrate and automate webhooks.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 pb-12 bg-gray-50 sm:mt-12 sm:pb-16 lg:mt-16 lg:pb-24">
+          <div class="relative">
+            <div class="absolute inset-0 h-3/4 bg-gray-50"></div>
+            <div class="relative  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="max-w-md mx-auto space-y-4 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0">
+                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                  <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
+                    <div>
+                      <h3
+                        class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600"
+                        id="tier-standard">
+                        Free
+                      </h3>
+                    </div>
+                    <div class="mt-4 flex items-baseline text-6xl font-extrabold">
+                      $0
+                      <span class="ml-1 text-2xl font-medium text-gray-500">
+                        /mo
+                      </span>
+                    </div>
+                    <p class="mt-5 text-lg text-gray-500">
+                      No credit required
+                    </p>
+                  </div>
+                  <div class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-white space-y-6 sm:p-10 sm:pt-6">
+                    <ul role="list" class="space-y-4">
+                      <li class="flex items-start">
+                        <div class="flex-shrink-0">
+                          <!-- Heroicon name: outline/check -->
+                          <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <p class="ml-3 text-base text-gray-700">
+                          2 server slots
+                        </p>
+                      </li>
+
+                      <li class="flex items-start">
+                        <div class="flex-shrink-0">
+                          <!-- Heroicon name: outline/check -->
+                          <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <p class="ml-3 text-base text-gray-700">
+                          2 hooks
+                        </p>
+                      </li>
+                      <li class="flex items-start">
+                        <div class="flex-shrink-0">
+                          <!-- Heroicon name: outline/check -->
+                          <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <p class="ml-3 text-base text-gray-700">
+                          Every trigger rules
+                        </p>
+                      </li>
+                      <li class="flex items-start">
+                        <div class="flex-shrink-0">
+                          <!-- Heroicon name: outline/check -->
+                          <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <p class="ml-3 text-base text-gray-700">
+                          24 hours Hook history
+                        </p>
+                      </li>
+                      <li class="flex items-start">
+                        <div class="flex-shrink-0">
+                          <!-- Heroicon name: outline/check -->
+                          <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <p class="ml-3 text-base text-gray-700">
+                          Unlimited Hook replay
+                        </p>
+                      </li>
+
+                    </ul>
+                    <div class="rounded-md shadow">
+                      <a href="https://my.hookdoo.com/login"
+                        class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-900"
+                        aria-describedby="tier-standard">
+                        Get started
+                      </a>
                     </div>
                   </div>
-                  <div class="px-2 pt-2 pb-3">
-                    <a
-                      href="./getstarted.html"
-                      class="
-                        block
-                        px-3
-                        py-2
-                        rounded-md
-                        text-base
-                        font-medium
-                        text-gray-700
-                        hover:text-gray-900 hover:bg-gray-50
-                      "
-                      >Get Started</a
-                    >
+                </div>
 
-                    <a
-                      href="./pricing.html"
-                      class="
-                        block
-                        px-3
-                        py-2
-                        rounded-md
-                        text-base
-                        font-medium
-                        text-gray-700
-                        hover:text-gray-900 hover:bg-gray-50
-                      "
-                      >Pricing</a
-                    >
+                <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                  <div class="px-6 py-8 bg-indigo-600 sm:p-10 sm:pb-6">
+                    <div>
+                      <h3
+                        class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600"
+                        id="tier-standard">
+                        Standard
+                      </h3>
+                    </div>
+                    <div class="mt-4 flex items-baseline text-6xl font-extrabold text-white">
+                      INCLUDED
+                    </div>
+                    <p class="mt-5 text-lg text-gray-100">
+                      With every Hookdeck paying plan
+                    </p>
+                  </div>
+                  <div
+                    class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-indigo-600 space-y-6 sm:p-10 sm:pt-6">
+                    <ul role="list" class="space-y-4">
+                      <li class="flex items-start">
+                        <p class="ml-3  text-white font-semibold uppercase">
+                          Everything in Free plus:
+                        </p>
+                      </li>
+                      <li class="flex items-start">
+                        <div class="flex-shrink-0">
+                          <!-- Heroicon name: outline/check -->
+                          <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <p class="ml-3 text-base text-white">
+                          16 server slots
+                        </p>
+                      </li>
 
-                    <a
-                      href="./FAQ.html"
-                      class="
-                        block
-                        px-3
-                        py-2
-                        rounded-md
-                        text-base
-                        font-medium
-                        text-gray-700
-                        hover:text-gray-900 hover:bg-gray-50
-                      "
-                      >FAQ</a
-                    >
-                  </div>
-                  <a
-                    href="https://my.hookdoo.com/login"
-                    class="
-                      block
-                      w-full
-                      px-5
-                      py-3
-                      text-center
-                      font-medium
-                      text-indigo-600
-                      bg-gray-50
-                      hover:bg-gray-100
-                    "
-                  >
-                    Log in
-                  </a>
-                  <a
-                    href="https://my.hookdoo.com/signup"
-                    class="
-                      block
-                      w-full
-                      px-5
-                      py-3
-                      text-center
-                      font-medium
-                      text-indigo-600
-                      bg-gray-50
-                      hover:bg-gray-100
-                    "
-                  >
-                    Sign Up
-                  </a>
-                </div>
-              </div>
-            </div>
+                      <li class="flex items-start">
+                        <div class="flex-shrink-0">
+                          <!-- Heroicon name: outline/check -->
+                          <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <p class="ml-3 text-base text-white">
+                          Unlimited hooks
+                        </p>
+                      </li>
 
-    <!-- #pricing -->
-    <div class="bg-gray-50">
-      <div class="pt-12 sm:pt-16 lg:pt-24">
-        <div class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div class="max-w-3xl mx-auto space-y-2 lg:max-w-none">
-            <p class="text-3xl font-extrabold text-black sm:text-4xl lg:text-5xl">
-              Pricing
-            </p>
-            <p class="text-xl text-black">
-              Everything you need to integrate and automate webhooks.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="mt-8 pb-12 bg-gray-50 sm:mt-12 sm:pb-16 lg:mt-16 lg:pb-24">
-        <div class="relative">
-          <div class="absolute inset-0 h-3/4 bg-gray-50"></div>
-          <div class="relative  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-md mx-auto space-y-4 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0">
-              <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
-                  <div>
-                    <h3 class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600" id="tier-standard">
-                     Free
-                    </h3>
-                  </div>
-                  <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                    $0
-                    <span class="ml-1 text-2xl font-medium text-gray-500">
-                      /mo
-                    </span>
-                  </div>
-                  <p class="mt-5 text-lg text-gray-500">
-                    No credit required 
-                  </p>
-                </div>
-                <div class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-white space-y-6 sm:p-10 sm:pt-6">
-                  <ul role="list" class="space-y-4">
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <!-- Heroicon name: outline/check -->
-                        <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <p class="ml-3 text-base text-gray-700">
-                        2 server slots
-                      </p>
-                    </li>
-    
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <!-- Heroicon name: outline/check -->
-                        <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <p class="ml-3 text-base text-gray-700">
-                        2 hooks
-                      </p>
-                    </li>
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <!-- Heroicon name: outline/check -->
-                        <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <p class="ml-3 text-base text-gray-700">
-                        Every trigger rules
-                      </p>
-                    </li>
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <!-- Heroicon name: outline/check -->
-                        <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <p class="ml-3 text-base text-gray-700">
-                        24 hours Hook history
-                      </p>
-                    </li>
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <!-- Heroicon name: outline/check -->
-                        <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <p class="ml-3 text-base text-gray-700">
-                        Unlimited Hook replay 
-                      </p>
-                    </li>
-              
-                  </ul>
-                  <div class="rounded-md shadow">
-                    <a href="https://my.hookdoo.com/login" class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-900" aria-describedby="tier-standard">
-                      Get started
-                    </a>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                <div class="px-6 py-8 bg-indigo-600 sm:p-10 sm:pb-6">
-                  <div>
-                    <h3 class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600" id="tier-standard">
-                      Standard
-                    </h3>
-                  </div>
-                  <div class="mt-4 flex items-baseline text-6xl font-extrabold text-white">
-                    INCLUDED   
-                  </div>
-                  <p class="mt-5 text-lg text-gray-100">
-                    With every Hookdeck paying plan
-                  </p>
-                </div>
-                <div class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-indigo-600 space-y-6 sm:p-10 sm:pt-6">
-                  <ul role="list" class="space-y-4">
-                    <li class="flex items-start">
-                      <p class="ml-3  text-white font-semibold uppercase">
-                        Everything in Free plus:
-                      </p>
-                    </li>
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <!-- Heroicon name: outline/check -->
-                        <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <p class="ml-3 text-base text-white">
-                        16 server slots
-                      </p>
-                    </li>
-    
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <!-- Heroicon name: outline/check -->
-                        <svg class="h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <p class="ml-3 text-base text-white">
-                        Unlimited hooks
-                      </p>
-                    </li>
-    
-                   
-                    
-                  </ul>
-                  <div class="rounded-md shadow">
-                    <a href="https://hookdeck.com/pricing" class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-gray-200 hover:bg-indigo-400" aria-describedby="tier-standard">
-                      Hookdeck's Plans
-                    </a>
+
+
+                    </ul>
+                    <div class="rounded-md shadow">
+                      <a href="https://hookdeck.com/pricing"
+                        class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-gray-200 hover:bg-indigo-400"
+                        aria-describedby="tier-standard">
+                        Hookdeck's Plans
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="mt-4 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-5">
-          <div class="max-w-md mx-auto lg:max-w-5xl">
-            <div class="rounded-lg bg-gray-200 px-6 py-8 sm:p-10 lg:flex lg:items-center">
-              <div class="flex-1">
-                <div>
-                  <h3 class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-white text-gray-800">
-                    ENTERPRISE
-                  </h3>
+          <div class="mt-4 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-5">
+            <div class="max-w-md mx-auto lg:max-w-5xl">
+              <div class="rounded-lg bg-gray-200 px-6 py-8 sm:p-10 lg:flex lg:items-center">
+                <div class="flex-1">
+                  <div>
+                    <h3
+                      class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-white text-gray-800">
+                      ENTERPRISE
+                    </h3>
+                  </div>
+                  <div class="mt-4 text-lg text-gray-600"> For specific needs such as additional server slots, data
+                    security, SLAs, etc...</div>
                 </div>
-                <div class="mt-4 text-lg text-gray-600"> For specific needs such as additional server slots, data security, SLAs, etc...</div>
-              </div>
-              <div class="mt-6 rounded-md shadow lg:mt-0 lg:ml-10 lg:flex-shrink-0">
-                <a href="mailto:info@hookdoo.com" class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-indigo-400">
-                  Contact Us
-                </a>
+                <div class="mt-6 rounded-md shadow lg:mt-0 lg:ml-10 lg:flex-shrink-0">
+                  <a href="mailto:info@hookdoo.com"
+                    class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-indigo-400">
+                    Contact Us
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-     <!-- footer -->
-     <footer class="bg-white">
-        <div
-          class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8"
-        >
-          <nav
-            class="-mx-5 -my-2 flex flex-wrap justify-center"
-            aria-label="Footer"
-          >
+      <!-- footer -->
+      <footer class="bg-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+          <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
             <div class="px-5 py-2">
-              <a
-                href="./getstarted.html"
-                class="text-base text-gray-500 hover:text-gray-900"
-              >
+              <a href="./getstarted.html" class="text-base text-gray-500 hover:text-gray-900">
                 Get Started
               </a>
             </div>
             <div class="px-5 py-2">
-              <a
-                href="./pricing.html"
-                class="text-base text-gray-500 hover:text-gray-900"
-              >
+              <a href="./pricing.html" class="text-base text-gray-500 hover:text-gray-900">
                 Pricing
               </a>
             </div>
             <div class="px-5 py-2">
-              <a
-                href="./FAQ.html"
-                class="text-base text-gray-500 hover:text-gray-900"
-              >
+              <a href="./FAQ.html" class="text-base text-gray-500 hover:text-gray-900">
                 FAQ
               </a>
             </div>
             <div class="px-5 py-2">
-              <a
-                href="./terms.html"
-                class="text-base text-gray-500 hover:text-gray-900"
-              >
+              <a href="./terms.html" class="text-base text-gray-500 hover:text-gray-900">
                 Terms
               </a>
             </div>
@@ -470,7 +442,7 @@
               <p class=" text-base">
                 Part of the <span class="text-indigo-500"> <a href="https://hookdeck.com">Hookdeck</a></span> family.
               </p>
-              </div>  
+            </div>
           </div>
           <p class="mt-8 text-center text-base text-gray-400">
             &copy; 2021 Hookdoo. All rights reserved.
@@ -478,4 +450,5 @@
         </div>
       </footer>
 </body>
+
 </html>
